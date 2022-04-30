@@ -21,7 +21,7 @@ function createDreamTeam(members) {
   let resultArr = [];
   for (let i = 0; i < members.length; i++) {
     if (typeof members[i] === 'string') {
-      resultArr.push(members[i].replaceAll(' ', '').charAt(0).toLowerCase());
+      resultArr.push(members[i].replace(/\s/g, '').charAt(0).toLowerCase());
     }
   }
   result = resultArr.sort().join('').toUpperCase();
